@@ -1,0 +1,4 @@
+.vscode
+*.zip
+_DS_Store
+node_modules
