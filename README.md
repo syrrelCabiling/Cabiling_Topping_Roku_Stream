@@ -1,44 +1,25 @@
-# Roku Flashback Project
+# Roku Flashback
 
 ### Take a trip back to yesteryear with your old audio, tv and film faves!
+Roku Flashback allows two separate users: Parents (as Admins) and Kids, which shows the appropriate contents according to the type of profile.
+
+#### Functionalities
+1.
 
 #### Setup
-You have some options - Docker, or old school. 
-
-If you're using a traditional PHP platform, then clone the repo to your localhost location (htdocs, www directory or wherever your local server expects to find your files).
-
-This is built with PHP on the back end, so you can either install the db_movies database with the tool of your choice, or drop the crutches and use the command line!. Configure your connection settings and you're ready to go.
-
-Or you can let Docker do its thing.  
-
-If you don't have Docker installed, you'll need to get it [here](http://www.docker.com).
-
-CD into the project directory and run docker-compose up  
-When you're done, run docker-compose down
-
-Your app is running on http://localhost:8010  
-phpmyadmin is running on http://localhost:8011
+1. Turn on MAMP
+2. Clone repo: https://github.com/syrrelCabiling/Stream_Roku.git in htdocs
 
 
 #### Dependencies:
-We've rolled our own PHP - no frameworks, just some classes and a bit of procedural code.
-
-We use Vue on the front end, but not the CLI or webpack - just Vue with ES6 modules. Also - no jQuery, just plain old JavaScript.
-
-We use Gulp for tooling - check <code>gulpfile.js</code> for reference. NPM install should get you up and running with your dev tools.
-
-We also use SASS.
-
-#### Built with:
-Vue (bare bones - no webpack!)
-
-vue-router
-
-Boostrap 4
-
-PHP
-
-JavaScript
+1. Bootstrap
+2. Vue.JS
+3. SASS
+4. GULP
+5. MySql
+6. JS
+7. PHP
 
 #### Authors / Dev Team:
-TVR and SpiderPan
+Syrrel Cabiling - Back-end Dev (https://github.com/syrrelCabiling)
+Courtney Topping - Front-End Dev (https://github.com/CourtneyTopping)
