@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 08, 2020 at 02:40 PM
+-- Generation Time: Apr 08, 2020 at 06:36 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -250,7 +250,7 @@ INSERT INTO `tbl_shows` (`tv_id`, `tv_cover`, `tv_title`, `tv_rating`, `tv_year`
 (9, 'thomas.jpeg', 'Thomas & Friends', 'TV-Y', ' 1984', '16 seasons', 'Based on a series of children\'s books, \"Thomas & Friends\" features Thomas the Tank Engine going on adventures with his fellow locomotives on the island of Sodor. Thomas is apt to get into trouble by trying too hard to be, in his words, a \"really useful engine,\" attempting to do things that are best left to bigger engines. Other members of Sir Topham Hatt\'s railway include junior engine Percy, Thomas\' best friend, who is always willing to help, and big engine Gordon -- the fastest and most powerful member of the team -- who uses his superior strength to help the smaller engines get out of trouble.\r\n', 'thomas.mp4', 'October 9, 1984', 0),
 (10, 'inspectorgadget.jpg', 'Inspector Gadget', 'TV-PG', '1983', '2 seasons', 'Inspector Gadgets, now takes route to solve the mystery rooting in America.\r\n', 'inspectorgadget.mp4', 'October 24, 1983', 0),
 (11, 'rugrats.jpeg', 'Rugrats', 'TV-Y', '1991', '9 seasons', '`Rugrats\' reveals the world from a baby\'s point of view. Everything looks bigger, more mysterious and uncontrollable. Angelica, the oldest, likes to terrorise her cousin, Tommy, and his friends, and is famous for screaming, \"You stupid babies!\" The adults in the series are often clueless.\r\n', 'rugrats.mp4', 'August 11, 1991', 0),
-(12, ' heyarnold.jpg', 'Hey Arnold!', 'TV-Y7', ' 1996', '5 seasons', 'The adventures of Arnold, a grade-schooler who lives with his grandparents Phil and Gertrude.\r\n', 'heyarnold.mp4', 'October 7, 1996', 0);
+(12, 'heyarnold.jpg', 'Hey Arnold!', 'TV-Y7', ' 1996', '5 seasons', 'The adventures of Arnold, a grade-schooler who lives with his grandparents Phil and Gertrude.\r\n', 'heyarnold.mp4', 'October 7, 1996', 0);
 
 -- --------------------------------------------------------
 
@@ -318,6 +318,7 @@ CREATE TABLE `tbl_songs` (
   `songs_id` int(11) NOT NULL,
   `song_cover` varchar(100) NOT NULL,
   `song_title` varchar(100) NOT NULL,
+  `song_file` varchar(50) NOT NULL,
   `song_year` varchar(5) NOT NULL,
   `song_runtime` varchar(100) NOT NULL,
   `isadmin` tinyint(4) NOT NULL
@@ -327,17 +328,17 @@ CREATE TABLE `tbl_songs` (
 -- Dumping data for table `tbl_songs`
 --
 
-INSERT INTO `tbl_songs` (`songs_id`, `song_cover`, `song_title`, `song_year`, `song_runtime`, `isadmin`) VALUES
-(1, 'heyjude.jpg', 'Hey Jude', '1968', '7:11', 1),
-(2, 'jailhouse.jpg', 'Jailhouse Rock', '1957', '2:35', 1),
-(3, 'beatit.jpg', 'Beat It', '1982', '4:18', 1),
-(4, 'dancing.jpg', 'Dancing Queen', '1976', '3:52', 1),
-(5, 'stayinalive.jpg', 'Stayin’ Alive', '1977', '4:45', 1),
-(6, 'sunshine.jpg', 'You Are My Sushine', '1977', '2:13', 0),
-(7, 'willalwaysloveyou.jpg', 'I Will Always Love You', '1974', '2:53', 0),
-(8, 'footloose.jpg', 'Footlose', '1984', '3:48', 0),
-(9, 'tiger.jpg', 'Eye of The Tige', '1982', '3:45', 0),
-(10, 'girlsfun.jpg', 'Girls Just Wanna Have Fun', '1983', '3:58', 0);
+INSERT INTO `tbl_songs` (`songs_id`, `song_cover`, `song_title`, `song_file`, `song_year`, `song_runtime`, `isadmin`) VALUES
+(1, 'heyjude.jpg', 'Hey Jude', 'heyjude.mp3', '1968', '7:11', 1),
+(2, 'jailhouserock.jpg', 'Jailhouse Rock', 'jailhouserock.mp3', '1957', '2:35', 1),
+(3, 'beatit.jpg', 'Beat It', 'beatit.mp3', '1982', '4:18', 1),
+(4, 'dancingqueen.jpg', 'Dancing Queen', 'dancingqueen.mp3', '1976', '3:52', 1),
+(5, 'stayinalive.jpg', 'Stayin’ Alive', 'stayinalive.mp3', '1977', '4:45', 1),
+(6, 'sunshine.jpg', 'You Are My Sushine', 'youAreMySunshine.mp3', '1977', '2:13', 0),
+(7, 'willalwaysloveyou.jpg', 'I Will Always Love You', 'willalwaysloveyou.mp3', '1974', '2:53', 0),
+(8, 'footloose.jpg', 'Footlose', 'footloose.mp3', '1984', '3:48', 0),
+(9, 'tiger.jpg', 'Eye of The Tige', 'tiger.mp3', '1982', '3:45', 0),
+(10, 'girlsfun.jpg', 'Girls Just Wanna Have Fun', 'wannahavefun.mp3', '1983', '3:58', 0);
 
 -- --------------------------------------------------------
 
