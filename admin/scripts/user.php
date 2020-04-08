@@ -49,33 +49,31 @@ function getAllUsers(){
     $pdo = Database::getInstance()->getConnection();
 
     $get_user_query = 'SELECT * FROM tbl_user';
-    $get_user_set= $pdo->prepare($get_user_query);
+    $get_user_set = $pdo->prepare($get_user_query);
     $get_user_result = $get_user_set->execute();
 
     $users = array();
 
-    if($get_user_result) {
-        while($user = $get_user_set->fetch(PDO::FETCH_ASSOC)){
-            // parse all the users info like we did for a single and pass them into the users array
+    if ($get_user_result) {
+        while($user = $get_user_set->fetch(PDO::FETCH_ASSOC)) {
+            // parse all the users' info like we did for a single and pass them 
+            // into the users array
+
             $currentuser = array();
 
             $currentuser['id'] = $user['user_id'];
-            $currentuser['uname'] = $user['user_name'];
-            $currentuser['fname'] = $user['user_fname'];
             $currentuser['admin'] = $user['user_admin'];
             $currentuser['avatar'] = $user['user_avatar'];
-            $currentuser['permission'] = $user['user_permissions'];
+            $currentuser['permissions'] = $user['user_permissions'];
+            $currentuser['username'] = $user['user_name'];
 
-           $users[] = $currentuser;
-    
+            $users[] = $currentuser;
         }
 
         return json_encode($users);
-    }else{
-        return 'Sorry! There was a problem getting the users!';
+    } else {
+        return 'There was a problem getting the users';
     }
-
-    
 }
 
 function editUser($id, $fname, $username, $password, $email){

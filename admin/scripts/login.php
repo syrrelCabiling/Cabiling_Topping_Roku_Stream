@@ -44,22 +44,19 @@ function login($username, $password, $ip){
             $user = array();
 
             $user['id'] = $found_user['user_id'];
-            $user['uname'] = $found_user['user_name'];
-            $user['fname'] = $found_user['user_fname'];
             $user['admin'] = $found_user['user_admin'];
             $user['avatar'] = $found_user['user_avatar'];
-            $user['permission'] = $found_user['user_permissions'];
+            $user['permissions'] = $found_user['user_permissions'];
+            $user['uname'] = $found_user['user_name'];
 
-            $message = json_encode($user);
-            return $message;
-
+            return json_encode($user);
         }
-    }else{
+
+    } else {
         //User does not exist
         $message = 'User does not exist';
         return $message;
-    }
-
+    }    
 }
 
 function confirm_logged_in(){

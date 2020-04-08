@@ -8,7 +8,6 @@ export default {
 
     template: `
     <div class="container">
-    <h1 class="mt-5">Welcome, {{ currentuser.fname }}</h1>
         <component :is="this.activeComponent"></component>
 
         <!-- show media icons here -->

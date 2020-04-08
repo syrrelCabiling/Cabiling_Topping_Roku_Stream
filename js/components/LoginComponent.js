@@ -57,7 +57,7 @@ export default {
                     .then(data => {
                         if (typeof data != "object") { // means that we're not getting a user object back
                             console.warn(data);
-                            // just for testing
+                            // just for testing - *do something better*
                             alert("authentication failed, please try again");
                         } else {
                             this.$emit("authenticated", true, data);

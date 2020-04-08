@@ -10,11 +10,10 @@ export default {
 		</div>
 
 		<div class="row">
-			<UserComponent v-for="(user, index) in userList" :liveuser="user" :key="index"/>
+			<user v-for="(user, index) in userList" :liveuser="user" :key="index" />
 		</div>
 	</div>
 	`,
-	
 
 	created: function () {
 		this.fetchAllUsers();
@@ -27,18 +26,19 @@ export default {
 			userList: []
 		}
 	},
+
 	methods: {
 		fetchAllUsers() {
-			let url = './admin/admin_getUsers.php?allusers=true';
-			fetch(url)
+			let url = './admin/admin_getusers.php?allusers=true';
+
+			fetch(url) 
 			.then(res => res.json())
 			.then(data => this.userList = data)
-			.catch(error => console.error(error))
-
+			.catch((error) => console.error(error))
 		}
 	},
 
 	components: {
-		UserComponent: UserComponent
+		user: UserComponent
 	}
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 08, 2020 at 09:32 AM
+-- Generation Time: Apr 08, 2020 at 02:40 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -147,7 +147,7 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_r
 (10, 'bclub.jpg', 'The Breakfast Club', 'R', '1985', '1h 37m', ' Five high school students from different walks of life endure a Saturday detention under a power-hungry principal (Paul Gleason). The disparate group includes rebel John (Judd Nelson), princess Claire (Molly Ringwald), outcast Allison (Ally Sheedy), brainy Brian (Anthony Michael Hall) and Andrew (Emilio Estevez), the jock. Each has a chance to tell his or her story, making the others see them a little differently -- and when the day ends, they question whether school will ever be the same.\r\n', 'bclub.mp4', 'February 7, 1985', 1),
 (11, 'goonies.jpg', 'The Goonies', 'PG', '1985', '1h 55m', 'A group of west coast kids facing their last days together before a development paves over their homes stumble onto evidence of pirate\'s treasure attracting the attention of a family of criminals.\r\n', 'goonies.mp4', 'June 7, 1985', 0),
 (12, 'mermaid.png', 'The Little Mermaid', 'G', '1989', '1h 25m', 'A beautiful mermaid called Ariel makes a deal with Ursula, a sea witch, to meet Eric, a human prince she falls in love with. However, unaware of Ursula\'s evil plans, Ariel ends up in trouble.\r\n', 'mermaid.mp4', 'November 17, 1989', 0),
-(13, 'future.jpeg', 'Back to the Future', 'PG', '1985', '1h 56m', 'Marty travels back in time using an eccentric scientist\'s time machine. However, he must make his high-school-aged parents fall in love in order to return to the present.\r\n', 'future.mp4', 'July 3, 1985', 0),
+(13, 'future.jpg', 'Back to the Future', 'PG', '1985', '1h 56m', 'Marty travels back in time using an eccentric scientist\'s time machine. However, he must make his high-school-aged parents fall in love in order to return to the present.\r\n', 'future.mp4', 'July 3, 1985', 0),
 (14, 'landbeforetime.jpg', 'The Land Before Time', 'G', '1988', '1h 20m', 'An orphaned brontosaurus dinosaur has to face many obstacles, until he along with 4 other dinosaurs learn how to survive with each others help.\r\n', 'landbeforetime.mp4', 'November 18, 1988', 0),
 (15, 'honey.jpg', 'Honey, I Shrunk the Kids', 'PG', '1989', '1h 41m', 'A scientist tries his best to get his recent invention, a shrinking machine, to work. Things go awry when he accidentally shrinks his children and throws them along with the garbage.\r\n', 'honey.mp4', 'June 23, 1989', 0);
 
@@ -374,8 +374,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permissions`, `user_admin`) VALUES
-(3, 'mom', 'admin', '123', 'me@you.com', '2020-03-09 15:48:21', '::1', 'olaf', 5, 1),
-(4, 'kid', 'kid', '123', 'me@you.com', '2020-03-09 15:49:04', 'no', 'null', 5, 0);
+(3, 'mom', 'admin', '123', 'me@you.com', '2020-03-09 15:48:21', '::1', 'friends', 5, 1),
+(4, 'kid', 'kid', '123', 'me@you.com', '2020-03-09 15:49:04', 'no', 'kid', 5, 0);
 
 --
 -- Indexes for dumped tables

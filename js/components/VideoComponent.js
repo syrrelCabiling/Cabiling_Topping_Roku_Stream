@@ -1,6 +1,5 @@
 export default {
     name: "TheVideoComponent",
-    
 
     template: `
     <section>
@@ -9,6 +8,8 @@ export default {
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
+                <span class="media-time">{{currentMediaDetails.movies_rating}}</span>
+
                 <span class="media-year">{{currentMediaDetails.movies_year}}</span>
             </div>
 
@@ -40,11 +41,12 @@ export default {
 
     methods: {
         retrieveVideoContent() {
-            // fetch all the video content here
+            // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
 
             if (localStorage.getItem("cachedVideo")) {
                 this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
+
                 this.currentMediaDetails = this.allRetrievedVideos[0];
 
             } else {
@@ -55,7 +57,7 @@ export default {
                 .then(res => res.json())
                 .then(data => {
                     localStorage.setItem("cachedVideo", JSON.stringify(data));
-                       
+
                     this.allRetrievedVideos = data;
                     this.currentMediaDetails = data[0];
                 })
