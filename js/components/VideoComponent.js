@@ -45,7 +45,6 @@ export default {
 
             if (localStorage.getItem("cachedVideo")) {
                 this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
-
                 this.currentMediaDetails = this.allRetrievedVideos[0];
 
             } else {
@@ -56,7 +55,7 @@ export default {
                 .then(res => res.json())
                 .then(data => {
                     localStorage.setItem("cachedVideo", JSON.stringify(data));
-
+                       
                     this.allRetrievedVideos = data;
                     this.currentMediaDetails = data[0];
                 })
