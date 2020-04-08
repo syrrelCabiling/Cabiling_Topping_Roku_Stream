@@ -1,6 +1,8 @@
 
 import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
+import UserHomeComponent from './components/UserHomeComponent.js';
+
 
 (() => {
   let router = new VueRouter({
@@ -9,6 +11,8 @@ import LoginComponent from './components/LoginComponent.js';
       { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: AllUsersComponent },
+      { path: '/userhome', name: 'home', component: UserHomeComponent, props: true },
+
     ]
   });
 
