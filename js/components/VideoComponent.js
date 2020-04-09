@@ -2,7 +2,7 @@ export default {
     name: "TheVideoComponent",
 
     template: `
-    <section>
+    <section class="videoComp">
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>

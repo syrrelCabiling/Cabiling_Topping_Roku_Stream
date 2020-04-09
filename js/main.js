@@ -33,6 +33,8 @@ import UserHomeComponent from './components/UserHomeComponent.js';
         // push user back to login page
         this.$router.push({ name: "login" });
         this.authenticated = false;
+        this.administrator = false;
+
 
         if (localStorage.getItem("cachedUser")) {
           localStorage.removeItem("cachedUser");
@@ -63,13 +65,13 @@ import UserHomeComponent from './components/UserHomeComponent.js';
     router: router
   }).$mount("#app");
 
-  // router.beforeEach((to, from, next) => {
-  //   //console.log('router guard fired!', to, from, vm.authenticated);
+  router.beforeEach((to, from, next) => {
+    //console.log('router guard fired!', to, from, vm.authenticated);
 
-  //   if (vm.authenticated == false) {
-  //     next("/login");
-  //   } else {
-  //     next();
-  //   }
-  // });
+    if (vm.authenticated == false) {
+      next("/login");
+    } else {
+      next();
+    }
+  });
 })();
