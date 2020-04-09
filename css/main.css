@@ -136,6 +136,20 @@ audio {
   opacity: 0.8;
 }
 
+.filter-genre {
+  background-color: #6C3C97;
+  padding: 20px 0px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.filter-genre ul li {
+  display: inline;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 105%;
+  padding: 15px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -209,8 +223,8 @@ header {
   top: 0;
   width: 300px;
   min-height: 100vh;
-  background-color: #2a2a2a;
-  background: #2a2a2a;
+  background-color: #662d91;
+  background: #662d91;
   transition: all 500ms linear;
 }
 
@@ -222,6 +236,7 @@ header {
   list-style: none;
   color: white;
   padding: 5%;
+  font-size: 150%;
 }
 
 #sidebar .burger-toggle {
@@ -326,13 +341,18 @@ html {
 
 body {
   font: 14px "Gill Sans", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background-image: url(../images/background.jpg);
   color: white;
   margin-bottom: 100px;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bebebe;
   text-decoration: none;
 }
 

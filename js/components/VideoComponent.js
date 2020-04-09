@@ -11,11 +11,34 @@ export default {
                 <span class="media-time">{{currentMediaDetails.movies_rating}}</span>
 
                 <span class="media-year">{{currentMediaDetails.movies_year}}</span>
+
+                <div class="socials">
+                <img src="images/like.png alt="like">
+                <img src="images/comment.png alt="comment">
+                <img src="images/share.png alt="share">
+                </div>
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
                 <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
+        </div>
+        <div class="row filter-genre">
+        <div class="col-12">
+        <ul>
+        <li><a href="index.php?filter=Running Shoes">Action</a></li>
+            <li><a href="index.php?filter=Shorts">Adventure</a></li>
+            <li><a href="index.php?filter=Sports Bras">Comedy</a></li>
+            <li><a href="index.php?filter=Jackets">Drama</a></li>
+            <li><a href="index.php?filter=Swim">Thriller</a></li>
+            <li><a href="index.php?filter=Shorts">Horror</a></li>
+            <li><a href="index.php?filter=Sports Bras">Musical</a></li>
+            <li><a href="index.php?filter=Jackets">Science Fiction</a></li>
+            <li><a href="index.php?filter=Swim">Family</a></li>
+            <li><a href="index.php?filter=Sports Bras">Fantasy</a></li>
+            <li><a href="index.php?filter=Jackets">Romance</a></li>
+        </ul>
+        </div>
         </div>
         <div class="row">
          <div class="col-12 col-sm-9">
