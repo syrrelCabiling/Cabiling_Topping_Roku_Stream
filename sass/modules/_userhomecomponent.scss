@@ -1,4 +1,6 @@
-.fs-video { width: 75% }
+.fs-video { 
+    float:right;
+    width: 75% }
 
 .media-container { background: darken($dark-bg, 15%)}
 .media-container:first-of-type { padding-bottom: 1em; }
@@ -9,6 +11,7 @@
     font-size: 1.5em; 
     padding-top: 1em;
     font-weight: bolder; 
+    margin-top: 30%;
 }
 
 .media-details { font-size: 1.2em; padding: 0.5em 0; }
