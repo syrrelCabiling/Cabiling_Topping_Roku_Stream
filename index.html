@@ -7,7 +7,7 @@
   <title>Vue.js Single-File JavaScript Component Demo</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/main.css">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
@@ -16,21 +16,7 @@
 </head>
 <body>
   <main id="app">
-	<div class="container-fluid">
-		<div class="row">
-			<header class="col-sm-12 fixed-top">
-				<img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
-				<nav class="float-right">
-				<ul>
-					<!-- <li>Kids</li> -->            
-					<li v-if="authenticated"><i class="fas fa-user-circle"></i></li>
-					<li v-if="administrator"><i class="fas fa-cog"></i></li>
-					<li v-if="authenticated" v-on:click="logout()"><i class="fas fa-power-off"></i></li>					
-				</ul>
-				</nav>
-			</header>
-		</div>
-	</div> <!-- end container fluid -->
+	
 	
 	<!-- first thing in component templates should be a container -->
 	<router-view @authenticated="setAuthenticated"/>	
@@ -55,5 +41,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 	<script type="module" src="js/main.js"></script>
+	<script type="text/javascript" src="js/sidebar.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,48 @@
+header img {
+    width: 20%;
+}
+
+header {
+    background-color: #662d91;
+}
+
+#sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    min-height: 100vh;
+    background-color: #2a2a2a;
+    background: #2a2a2a;
+    transition: all 500ms linear;
+}
+#sidebar.active {
+    right: 0px;
+}
+
+#sidebar ul li {
+    list-style: none;
+    color: white;
+    padding: 5%;
+    // border-bottom: 1px solid white;
+}
+
+#sidebar .burger-toggle {
+    position: absolute;
+    right: 350px;
+    top: 20px;
+    cursor: pointer;
+
+}
+
+#sidebar .burger-toggle span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: white;
+    margin: 3px 0px;
+}
+
+#sidebarComp nav {
+    margin-right: 20% !important;
+}

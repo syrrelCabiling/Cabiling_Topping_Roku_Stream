@@ -1,13 +1,26 @@
-* { border: 0; padding: 0; margin: 0; }
+@import '_vars';
+@import 'modules/_usercomponent';
+@import 'modules/_userhomecomponent';
+@import 'modules/_footer';
+@import 'modules/_login';
+@import 'modules/_sidebar';
+@import 'modules/_mediaqueries';
 
-html { position: relative; min-height: 100%; }
+
+* { border: 0; padding: 0; margin: 0 auto; }
+
+html { 
+	position: relative; 
+	min-height: 100%; 
+
+}
 
 body {
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 14px "Gill Sans", Helvetica, Arial, sans-serif;
 	background-color: black;
 	color: white;
 	margin-bottom: 100px;
-	background: url(../images/gunmetal.jpg) repeat;
+	// padding-top: 2% !important;
 }
 
 a {
@@ -16,7 +29,7 @@ a {
 }
 
 header {
-	background-color:$dark-bg;
+
 	padding: 12px 14px;
 	position: fixed;
 	z-index: 500;
@@ -29,8 +42,10 @@ header {
 		text-transform: uppercase;
 		position: relative;
 		top: 5px;
+		color: white;
 	}
 }
+
 
 nav:not(.side-nav) {
 	ul {
@@ -71,3 +86,8 @@ nav:not(.side-nav) {
 }
 
 .user-message { text-align: center; font-size: 2rem; }
+
+
+.videoComp {
+	margin-top: 20%;
+}
