@@ -23,7 +23,7 @@ a {
 }
 
 header {
-  background-color: #662d91;
+  background-color: #1a1818;
   padding: 12px 14px;
   position: fixed;
   z-index: 500;
@@ -93,7 +93,6 @@ nav:not(.side-nav) ul li {
   background: #6C3C97;
   border: 4px solid #522d73;
   margin-bottom: 1em;
-  width: 300px;
 }
 .card .card-body p {
   margin: 10px 0 0;
@@ -225,7 +224,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background-color: #662d91;
+  background-color: #1a1818;
 }
 footer p {
   display: inline-block;
@@ -258,7 +257,7 @@ footer ul li {
   background: #662d91;
   background: linear-gradient(151deg, #662d91 45%, #331949 100%);
   background-size: cover;
-  padding-top: 15%;
+  padding-top: 5%;
 }
 
 .login-logo {
@@ -431,10 +430,4 @@ nav:not(.side-nav) ul li {
   font-size: 2rem;
 }
 
-#flashb {
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 5px;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=mater.css.map */

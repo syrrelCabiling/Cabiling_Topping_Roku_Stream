@@ -1,4 +1,29 @@
-.roku-jumbotron {
-    color: #333;
-    margin: 70px 30px 0 !important;
+// .roku-jumbotron {
+//     color: #333;
+//     margin: 70px 30px 0 !important;
+// }
+
+.login-bg {
+    min-height: 100vh;
+    background: rgb(102,45,145);
+    background: linear-gradient(151deg, rgba(102,45,145,1) 45%, rgba(51,25,73,1) 100%);
+    background-size: cover;
+    padding-top: 15%;
+}
+.login-logo {
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    background: seashell;
+}
+
+.btn-purple {
+    background-color: #491f6b;
+    color: white;
+    width: 140%;
+    -webkit-box-shadow: 2px 7px 25px -4px rgba(46,11,74,1);
+    -moz-box-shadow: 2px 7px 25px -4px rgba(46,11,74,1);
+    box-shadow: 2px 7px 25px -4px rgba(46,11,74,1);
 }
