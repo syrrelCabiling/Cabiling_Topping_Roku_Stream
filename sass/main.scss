@@ -17,14 +17,19 @@ html {
 
 body {
 	font: 14px "Gill Sans", Helvetica, Arial, sans-serif;
-	background-color: black;
+	background-image: url(../images/background.jpg);
 	color: white;
 	margin-bottom: 100px;
 	// padding-top: 2% !important;
 }
 
 a {
-	color: #00B7FF;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(190, 190, 190);
 	text-decoration: none;
 }
 

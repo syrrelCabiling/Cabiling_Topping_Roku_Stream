@@ -24,10 +24,18 @@ export default {
           <span></span>
         </div>
         <ul class="mt-5">
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
-          <li>Link 4</li>
+        <li>What Do You Want To See?</li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Music</a></li>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+          <li><a href="#">Edit User</a></li>
+        <li><a href="#">Switch Profiles</a></li>
         </ul>
       
       <!-- Profile Nav outside -->

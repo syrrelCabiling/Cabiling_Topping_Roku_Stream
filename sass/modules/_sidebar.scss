@@ -12,8 +12,8 @@ header {
     top: 0;
     width: 300px;
     min-height: 100vh;
-    background-color: #2a2a2a;
-    background: #2a2a2a;
+    background-color: #662d91;
+    background: #662d91;
     transition: all 500ms linear;
 }
 #sidebar.active {
@@ -24,6 +24,7 @@ header {
     list-style: none;
     color: white;
     padding: 5%;
+    font-size: 150%;
     // border-bottom: 1px solid white;
 }
 

@@ -12,11 +12,22 @@ export default {
 
                 <span class="media-year">{{currentMediaDetails.song_year}}</span>
             </div>
-
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
                 <audio autoplay controls :src="'audio/' + currentMediaDetails.song_file" class="fs-video"></audio>
             </div>
         </div>
+        <div class="row filter-genre">
+        <div class="col-12">
+        <ul>
+        <li><a href="index.php?filter=Running Shoes">Rock</a></li>
+            <li><a href="index.php?filter=Shorts">Pop</a></li>
+            <li><a href="index.php?filter=Sports Bras">Country</a></li>
+            <li><a href="index.php?filter=Jackets">Children</a></li>
+            <li><a href="index.php?filter=Swim">R&B</a></li>
+        </ul>
+        </div>
+        </div>
+
         <div class="row">
          <div class="col-12 col-sm-9">
             <div class="thumb-wrapper clearfix">

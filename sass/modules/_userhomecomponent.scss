@@ -10,8 +10,8 @@
 .media-title { 
     font-size: 1.5em; 
     padding-top: 1em;
-    font-weight: bolder; 
-    margin-top: 30%;
+    font-weight: bolder;
+    margin-top: 30%; 
 }
 
 .media-details { font-size: 1.2em; padding: 0.5em 0; }
@@ -102,3 +102,16 @@ audio {
     bottom: 12%;
     opacity: 0.8;
 }
+.filter-genre {
+    background-color: $roku-purple;
+   padding: 20px 0px 10px 10px;
+    margin-bottom: 20px;
+}
+
+.filter-genre ul li {
+        display: inline;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 105%;
+        padding: 15px;
+      }
