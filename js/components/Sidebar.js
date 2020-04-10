@@ -1,3 +1,6 @@
+import UserHomeComponent from "./UserHomeComponent.js";
+
+
 export default {
     name: "Sidebar",
     template: `
@@ -35,7 +38,7 @@ export default {
         <br><br>
         <br><br>
           <li><a href="#">Edit User</a></li>
-        <li><a href="#">Switch Profiles</a></li>
+        <li><a v-on:click='switchProfiles()'>Switch Profiles</a></li>
         </ul>
       
       <!-- Profile Nav outside -->
@@ -69,6 +72,9 @@ export default {
         this.authenticated = false;
         this.administrator = false;
 
+    },
+    switchProfiles() {
+      this.activeComponent = KidComponent;
     }
   }
 }

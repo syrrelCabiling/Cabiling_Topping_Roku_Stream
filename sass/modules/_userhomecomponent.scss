@@ -11,7 +11,6 @@
     font-size: 1.5em; 
     padding-top: 1em;
     font-weight: bolder;
-    margin-top: 30%; 
 }
 
 .media-details { font-size: 1.2em; padding: 0.5em 0; }
@@ -19,7 +18,10 @@
 .media-year, .media-time { font-size: 1em; }
 .media-year { display: block; float: right; }
 
-.side-nav { background: darken($dark-bg, 9%) }
+.side-nav { 
+    background: darken($dark-bg, 9%); 
+    width: 100% !important;
+}
 
 // left hand pad list -> audio, film television
 .media-type { 
@@ -40,6 +42,17 @@
     }
 
     li:hover span:first-of-type { color: $roku-purple }
+}
+
+.media-type audio{
+
+    position: absolute;
+    top:100%;
+    left:50%;
+    right:50%;
+    bottom: 0;
+    width: 100%
+    
 }
 
 // genre filter links

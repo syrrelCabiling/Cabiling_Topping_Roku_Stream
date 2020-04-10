@@ -6,7 +6,10 @@ export default {
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.song_title}}</h4>
+                <img :src="'images/' + currentMediaDetails.song_cover" alt="Album Cover" class="song_cover">
+
                 <p class="media-details" v-html="currentMediaDetails.song_storyline"></p>
+
                 <span class="media-time">{{currentMediaDetails.song_runtime}}</span>
 
 

@@ -21,6 +21,7 @@ import UserHomeComponent from './components/UserHomeComponent.js';
       user: [],
 
       //currentUser: {},
+
     },
 
     methods: {

@@ -1,3 +1,6 @@
+import GenreNavComponent from "./GenreNavComponent.js";
+
+
 export default {
     name: "TheVideoComponent",
 
@@ -23,26 +26,10 @@ export default {
                 <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
-        <div class="row filter-genre">
-        <div class="col-12">
-        <ul>
-        <li><a href="index.php?filter=Running Shoes">Action</a></li>
-            <li><a href="index.php?filter=Shorts">Adventure</a></li>
-            <li><a href="index.php?filter=Sports Bras">Comedy</a></li>
-            <li><a href="index.php?filter=Jackets">Drama</a></li>
-            <li><a href="index.php?filter=Swim">Thriller</a></li>
-            <li><a href="index.php?filter=Shorts">Horror</a></li>
-            <li><a href="index.php?filter=Sports Bras">Musical</a></li>
-            <li><a href="index.php?filter=Jackets">Science Fiction</a></li>
-            <li><a href="index.php?filter=Swim">Family</a></li>
-            <li><a href="index.php?filter=Sports Bras">Fantasy</a></li>
-            <li><a href="index.php?filter=Jackets">Romance</a></li>
-        </ul>
-        </div>
-        </div>
+       <GenreNavComponent></GenreNavComponent>
         <div class="row">
          <div class="col-12 col-sm-9">
-            <div class="thumb-wrapper clearfix">
+            <div class="thumb-wrapper float-right">
                 <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media
                 thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left media-thumb">
                 </div>
@@ -94,5 +81,8 @@ export default {
         loadNewMovie(movie) {
             this.currentMediaDetails = movie;
         }
+    },
+    components: {
+        GenreNavComponent: GenreNavComponent
     }
 }

@@ -4,6 +4,8 @@
 @import 'modules/_footer';
 @import 'modules/_login';
 @import 'modules/_sidebar';
+@import 'modules/_comment';
+
 @import 'modules/_mediaqueries';
 
 
@@ -19,6 +21,8 @@ body {
 	font: 14px "Gill Sans", Helvetica, Arial, sans-serif;
 	background-image: url(../images/background.jpg);
 	color: white;
+	background-repeat: no-repeat !important;
+    background-size: cover;
 	margin-bottom: 100px;
 	// padding-top: 2% !important;
 }
@@ -51,6 +55,9 @@ header {
 	}
 }
 
+nav {
+	width: 100%;
+}
 
 nav:not(.side-nav) {
 	ul {
@@ -93,12 +100,16 @@ nav:not(.side-nav) {
 .user-message { text-align: center; font-size: 2rem; }
 
 
-.videoComp {
-	margin-top: 20%;
-}
+// .videoComp {
+// 	margin-top: 5%;
+// }
 
 #flashb {
     font-style: italic;
     font-weight: 400;
     letter-spacing: 5px;
+}
+
+.song_cover {
+	width: 60%;
 }
