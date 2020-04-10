@@ -1,3 +1,6 @@
+import CommentComponent from "./CommentComponent.js";
+
+
 export default {
     name: "AudioComponent",
 
@@ -14,6 +17,11 @@ export default {
 
 
                 <span class="media-year">{{currentMediaDetails.song_year}}</span>
+
+
+                <!-- Facebook plugin -->
+                <CommentComponent></CommentComponent>
+                
             </div>
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
                 <audio autoplay controls :src="'audio/' + currentMediaDetails.song_file" class="fs-video"></audio>
@@ -85,5 +93,9 @@ export default {
         loadNewSong(song) {
             this.currentMediaDetails = song;
         }
+    },
+    components: {
+        CommentComponent: CommentComponent
+
     }
 }

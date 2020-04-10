@@ -1,3 +1,6 @@
+import CommentComponent from "./CommentComponent.js";
+
+
 export default {
     name: "TheTvComponent",
 
@@ -11,6 +14,10 @@ export default {
                 <span class="media-time">{{currentMediaDetails.tv_rating}}</span>
 
                 <span class="media-year">{{currentMediaDetails.tv_year}}</span>
+
+                <!-- Facebook plugin -->
+                <CommentComponent></CommentComponent>
+
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
@@ -88,5 +95,9 @@ export default {
         loadNewShow(show) {
             this.currentMediaDetails = show;
         }
+    },
+    components: {
+        CommentComponent: CommentComponent
+
     }
 }
