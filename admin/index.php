@@ -9,26 +9,44 @@
 
         if (isset($_GET['filter'])) {
             //Filter
+            $tbl = "tbl_" . trim($_GET["filter"]);
             $args = array(
-                'tbl' => 'tbl_movies',
-                'tbl2' => 'tbl_genre',
-                'tbl3' => 'tbl_mov_genre',
-                'col' => 'movies_id',
-                'col2' => 'genre_id',
+                'tbl' => 'tbl_mov_genre',
+                'col' => 'genre_id',
+                'col2' => 'movie_id',
                 'col3' => 'genre_name',
                 'filter' => $_GET['filter'],
             );
             
-            $results = getMoviesByFilter($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
+            $results = getMoviesByFilter($args);
 
             echo json_encode($results);
 
         } else {
 
-            $results = getAll($tbl);
+            $results = getAllGenre($tbl);
 
             echo json_encode($results);
            
         }
+
+
+
+// if (isset($_GET['filter'])) {
+//     //Filter
+//     $args = array(
+//         'tbl' => 'tbl_movies',
+//         'tbl2' => 'tbl_genre',
+//         'tbl3' => 'tbl_mov_genre',
+//         'col' => 'movies_id',
+//         'col2' => 'genre_id',
+//         'col3' => 'genre_name',
+//         'filter' => $_GET['filter'],
+//     );
+//     $getMovies = getMoviesByFilter($args);
+// } else {
+//     $movie_table = 'tbl_movies';
+//     $getMovies = getAll($movie_table);
+// }
     
-?>
+// ?>

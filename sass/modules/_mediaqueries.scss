@@ -38,29 +38,17 @@
         
         li { 
             padding: 1rem;
-            border-bottom: thin solid $dark-bg;
             cursor: pointer;
-            display: block;
-            width: auto;
-            text-align: left;
-
-            span:first-of-type { 
-                padding-right: 1rem; 
+            display: inline-block;
+            width: 33%;
+            text-align: center;
+    
+            span:first-of-type {  
                 font-size: 2rem; 
                 color: white;
-            }
-    
-            span:last-of-type { 
-                display: inline-block !important;
-                text-transform: uppercase;
-                font-size: 1.2em;
-                position: relative;
-                top: -6px;
             }
         }
     
         li:hover span:first-of-type { color: $roku-purple }
-    
-        li:last-of-type { border-bottom: none; }
     }
 }
