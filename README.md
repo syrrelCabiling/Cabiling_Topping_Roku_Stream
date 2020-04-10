@@ -23,3 +23,9 @@ Roku Flashback allows two separate users: Parents (as Admins) and Kids, which sh
 #### Authors / Dev Team:
 Syrrel Cabiling - Back-end Dev (https://github.com/syrrelCabiling)
 Courtney Topping - Front-End Dev (https://github.com/CourtneyTopping)
+
+
+#### Resources:
+Comment Plugin:
+https://developers.facebook.com/docs/plugins/comments#moderation-dashboard
+https://developers.facebook.com/docs/plugins/like-button

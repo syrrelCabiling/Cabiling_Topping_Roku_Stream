@@ -13,10 +13,11 @@ export default {
     template: `
     <div class="container">
     <Sidebar></Sidebar>
-    
+ 
         <!-- show media icons here -->
         <div class="row"> <!-- 2-up for nav and media info -->
             <nav class="col-lg-12 col-sm-3 side-nav">
+            
                 <ul class="media-type">
                     <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component)">
                         <span>
@@ -30,6 +31,7 @@ export default {
         </div>
 
         <component :is="this.activeComponent"></component>
+        <div id="fb-root"></div>
         <!-- <CommentComponent></CommentComponent> -->
     </div>
     `,
