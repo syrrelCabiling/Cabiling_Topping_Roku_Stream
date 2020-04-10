@@ -2,6 +2,8 @@
 import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import UserHomeComponent from './components/UserHomeComponent.js';
+import KidComponent from './components/KidComponent.js';
+
 
 (() => {
   let router = new VueRouter({
@@ -10,7 +12,9 @@ import UserHomeComponent from './components/UserHomeComponent.js';
       { path: '/', redirect: { name: "login" } },
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: AllUsersComponent },
-      { path: '/userhome', name: 'home', component: UserHomeComponent, props: true } //important for passing data
+      { path: '/userhome', name: 'home', component: UserHomeComponent, props: true }, //important for passing data
+      { path: '/kidhome', name: 'kidhome', component: KidComponent, props: true } //important for passing data
+
     ]
   });
 
@@ -19,6 +23,7 @@ import UserHomeComponent from './components/UserHomeComponent.js';
       authenticated: false,
       administrator: false,
       user: [],
+      switchUsersComponent: UserHomeComponent
 
       //currentUser: {},
 
@@ -43,7 +48,11 @@ import UserHomeComponent from './components/UserHomeComponent.js';
 
         if (localStorage.getItem("cachedVideo"))
           localStorage.removeItem("cachedVideo");
-      }
+      },
+      switchUsersComponents(){
+        this.switchUsersComponent = (this.switchUsersComponent.name === "UserHomeComponent") ? KidComponent : switchUsersComponent;
+
+    }
     },
 
     created: function() {
