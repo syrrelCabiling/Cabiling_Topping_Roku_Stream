@@ -1,22 +1,16 @@
 import VideoComponent from "./VideoComponent.js";
 import TvComponent from "./TvComponent.js";
 import AudioComponent from "./AudioComponent.js";
-import Sidebar from "./Sidebar.js";
+
 
 
 export default {
-    name: "TheUserHomeComponent",
+    name: "KidComponent",
 
-    props:  {user: 
-        {
-        username: String,
-        admin: Number
-    }
-},
-
+ 
     template: `
     <div class="container">
-    <Sidebar></Sidebar>
+
     <h1>{{ message  }}</h1>
         <!-- show media icons here -->
         <div class="row"> <!-- 2-up for nav and media info -->
@@ -55,10 +49,5 @@ export default {
         switchMedia(theComponent) {
             this.KidComponent = theComponent;
         }
-    },
-
-    components: {
-        Sidebar: Sidebar
     }
-
 }

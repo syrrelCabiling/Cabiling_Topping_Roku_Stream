@@ -1,5 +1,5 @@
-import GenreNavComponent from "./GenreNavComponent.js";
 import CommentComponent from "./CommentComponent.js";
+//import GenreNavComponent from "./GenreNavComponent.js";
 
 
 export default {
@@ -20,19 +20,54 @@ export default {
                 <!-- Facebook plugin -->
                 <CommentComponent></CommentComponent>
 
-                <!-- Dont delete this section -->
-                <div class="socials">
-                <img src="images/like.png alt="like">
-                <img src="images/comment.png alt="comment">
-                <img src="images/share.png alt="share">
-                </div>
+           
+               
             </div>
 
             <div class="col-lg-8 order-1 order-md-2 col-md-9 media-container text-center">
                 <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
-       <GenreNavComponent></GenreNavComponent>
+        <div class="row filter-genre">
+    <div class="col-12">
+        <ul>
+            <li>
+                <a href="all" @click.prevent="retrieveVideoContent">All</a>
+            </li>
+            <li>
+                <a href="Action" @click.prevent="filterMedia('Action')">Action</a>
+            </li>
+            <li>
+                <a href="Adventure" @click.prevent="filterMedia('Adventure')">Adventure</a>
+            </li>
+            <li>
+                <a href="Comedy" @click.prevent="filterMedia('Comedy')">Comedy</a>
+            </li>
+            <li>
+                <a href="Thriller" @click.prevent="filterMedia('Thriller')">Thriller</a>
+            </li>
+    
+            <li>
+                <a href="Musical" @click.prevent="filterMedia('Musical')">Musical</a>
+            </li>
+            <li>
+                <a href="Science Fiction" @click.prevent="filterMedia('Science Fiction')">Science Fiction</a>
+            </li>
+            <li>
+                <a href="Family" @click.prevent="filterMedia('Family')">Family</a>
+            </li>
+            <li>
+                <a href="Fantasy" @click.prevent="filterMedia('Fantasy')">Fantasy</a>
+            </li>
+            <li>
+                <a href="Romance" @click.prevent="filterMedia('Romance')">Romance</a>
+            </li>
+           
+
+        </ul>
+    </div>
+</div>
+
         <div class="row">
          <div class="col-12 col-sm-9">
             <div class="thumb-wrapper">
@@ -55,7 +90,23 @@ export default {
         this.retrieveVideoContent();
     },
 
+    
+
     methods: {
+        filterMedia(filter){
+            let url = `./admin/index.php?media=movies&filter=${filter}`;
+
+
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+               //localStorage.setItem("cachedFilter", JSON.stringify(data));
+
+                this.allRetrievedVideos = data;
+                this.currentMediaDetails = data[0];
+            })
+
+        },
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
@@ -89,7 +140,7 @@ export default {
         }
     },
     components: {
-        GenreNavComponent: GenreNavComponent,
+       // GenreNavComponent: GenreNavComponent,
         CommentComponent: CommentComponent
     }
 }

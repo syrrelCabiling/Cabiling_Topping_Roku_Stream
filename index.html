@@ -20,7 +20,7 @@
 	
 	<!-- first thing in component templates should be a container -->
 	<router-view @authenticated="setAuthenticated"/>	
-
+	<component :is="switchUsersComponent"></component>
 	</main>
 
 	<footer>

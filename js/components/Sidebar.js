@@ -1,3 +1,4 @@
+import KidComponent from "./KidComponent.js";
 import UserHomeComponent from "./UserHomeComponent.js";
 
 
@@ -38,7 +39,7 @@ export default {
         <br><br>
         <br><br>
           <li><a href="#">Edit User</a></li>
-        <li><a v-on:click='switchProfiles()'>Switch Profiles</a></li>
+        <li><a @click="switchUsersComponents()">Switch Profiles</a></li>
         </ul>
       
       <!-- Profile Nav outside -->
@@ -57,6 +58,8 @@ export default {
       authenticated: true,
       administrator: true,
       user: [],
+      switchUsersComponent: UserHomeComponent //attempt to switch from Adult to Kid Component
+
       }
       //currentUser: {},
     },
@@ -73,8 +76,9 @@ export default {
         this.administrator = false;
 
     },
-    switchProfiles() {
-      this.activeComponent = KidComponent;
-    }
+    switchUsersComponents(){
+      this.switchUsersComponent = (this.switchUsersComponent.name === "UserHomeComponent") ? KidComponent : UsersHomeComponent;
+
+  }
   }
 }
