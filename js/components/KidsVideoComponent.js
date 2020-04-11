@@ -6,7 +6,7 @@ export default {
     name: "TheKidVideoComponent",
 
     template: `
-    <section class="videoComp">
+    <section class="videoComp" id="kiddie">
         <div class="row">
             <div class="col-lg-4 order-2 order-md-1 col-md-3 media-container">
             <h4>{{ message }}</h4>
@@ -43,7 +43,7 @@ export default {
 
     data: function () {
         return {
-            message: "HOLA KID",
+            message: "HELLO, KID",
             currentMediaDetails: {},
             allRetrievedVideos: []
         }

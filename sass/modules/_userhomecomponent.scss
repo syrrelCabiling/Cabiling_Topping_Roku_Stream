@@ -99,6 +99,10 @@
     margin: 0.7em;
 }
 
+.media-thumb:hover {
+    opacity: 50%;
+}
+
 .audio-thumb { height: 150px; }
 
 .audio-wrapper {
@@ -124,6 +128,7 @@ audio {
 .filter-genre ul li {
         display: inline;
         margin: 0 auto;
+        text-align: center;
         text-transform: uppercase;
         font-size: 105%;
         padding: 15px;
