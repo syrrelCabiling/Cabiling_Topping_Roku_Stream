@@ -5,6 +5,10 @@
         font-size: 2.5rem;
     }
 
+    audio {
+        margin-top: 200px;
+    }
+
     .media-title {
         font-size: 1.25em;
     }
@@ -16,6 +20,7 @@
     .media-thumb { height: 165px; }
 
     footer ul { max-width: none; }
+
 }
 
 @media (min-width: 992px) {

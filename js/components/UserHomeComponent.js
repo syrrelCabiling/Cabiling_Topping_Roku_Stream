@@ -22,7 +22,7 @@ export default {
             <!-- show media icons here -->
 
             <div class="row"> <!-- 2-up for nav and media info -->
-                <nav class="col-lg-12 col-sm-3 side-nav">
+                <nav class="col-lg-12 side-nav">
                 
                     <ul class="media-type">
                         <li v-for="media in mediaTypesAdmin" :data-type="media.description" @click="switchMedia(media.component)">
