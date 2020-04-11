@@ -113,3 +113,12 @@ nav:not(.side-nav) {
 .song_cover {
 	width: 60%;
 }
+
+.thumb-wrapper img {
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.thumb-wrapper a:hover {
+	width: 50%;
+}

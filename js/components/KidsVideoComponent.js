@@ -3,14 +3,13 @@ import CommentComponent from "./CommentComponent.js";
 
 
 export default {
-    name: "TheVideoComponent",
-    // props: ['currentuser'],
+    name: "TheKidVideoComponent",
 
     template: `
     <section class="videoComp">
         <div class="row">
             <div class="col-lg-4 order-2 order-md-1 col-md-3 media-container">
-           
+            <h4>{{ message }}</h4>
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
@@ -30,45 +29,6 @@ export default {
                 <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
-        <div class="row filter-genre">
-            <div class="col-12">
-                <ul>
-                    <li>
-                        <a href="all" @click.prevent="retrieveVideoContent">All</a>
-                    </li>
-                    <li>
-                        <a href="Action" @click.prevent="filterMedia('Action')">Action</a>
-                    </li>
-                    <li>
-                        <a href="Adventure" @click.prevent="filterMedia('Adventure')">Adventure</a>
-                    </li>
-                    <li>
-                        <a href="Comedy" @click.prevent="filterMedia('Comedy')">Comedy</a>
-                    </li>
-                    <li>
-                        <a href="Thriller" @click.prevent="filterMedia('Thriller')">Thriller</a>
-                    </li>
-            
-                    <li>
-                        <a href="Musical" @click.prevent="filterMedia('Musical')">Musical</a>
-                    </li>
-                    <li>
-                        <a href="Science Fiction" @click.prevent="filterMedia('Science Fiction')">Science Fiction</a>
-                    </li>
-                    <li>
-                        <a href="Family" @click.prevent="filterMedia('Family')">Family</a>
-                    </li>
-                    <li>
-                        <a href="Fantasy" @click.prevent="filterMedia('Fantasy')">Fantasy</a>
-                    </li>
-                    <li>
-                        <a href="Romance" @click.prevent="filterMedia('Romance')">Romance</a>
-                    </li>
-                
-
-                </ul>
-            </div>
-        </div>
 
         <div class="row">
          <div class="col-12 col-sm-9">
@@ -83,7 +43,7 @@ export default {
 
     data: function () {
         return {
-       
+            message: "HOLA KID",
             currentMediaDetails: {},
             allRetrievedVideos: []
         }
@@ -96,20 +56,6 @@ export default {
     
 
     methods: {
-        filterMedia(filter){
-            let url = `./admin/index.php?media=movies&filter=${filter}`;
-
-
-            fetch(url)
-            .then(res => res.json())
-            .then(data => {
-               //localStorage.setItem("cachedFilter", JSON.stringify(data));
-
-                this.allRetrievedVideos = data;
-                this.currentMediaDetails = data[0];
-            })
-
-        },
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
@@ -121,7 +67,7 @@ export default {
 
             } else {
 
-                let url = `./admin/index.php?media=movies`;
+                let url = `./admin/index.php?media=moviesKIDS`;
                 //store a video
                 fetch(url)
                 .then(res => res.json())

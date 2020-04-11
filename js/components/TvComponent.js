@@ -29,36 +29,23 @@ export default {
                 <div class="col-12">
                     <ul>
                         <li>
-                            <a href="all" @click.prevent="retrieveVideoContent">All</a>
+                            <a href="all" @click.prevent="retrieveShowContent">All</a>
                         </li>
                         <li>
-                            <a href="Action" @click.prevent="filterMediaShows('Action')">Action</a>
+                            <a href="Action" @click.prevent="filterShows('Action')">Action</a>
+                        </li>
+                       
+                        <li>
+                            <a href="Comedy" @click.prevent="filterShows('Comedy')">Comedy</a>
+                        </li>
+        
+                        <li>
+                            <a href="Science Fiction" @click.prevent="filterShows('Science Fiction')">Science Fiction</a>
                         </li>
                         <li>
-                            <a href="Adventure" @click.prevent="filterMediaShows('Adventure')">Adventure</a>
+                            <a href="Family" @click.prevent="filterShows('Family')">Family</a>
                         </li>
-                        <li>
-                            <a href="Comedy" @click.prevent="filterMediaShows('Comedy')">Comedy</a>
-                        </li>
-                        <li>
-                            <a href="Thriller" @click.prevent="filterMediaShows('Thriller')">Thriller</a>
-                        </li>
-                
-                        <li>
-                            <a href="Musical" @click.prevent="filterMediaShows('Musical')">Musical</a>
-                        </li>
-                        <li>
-                            <a href="Science Fiction" @click.prevent="filterMediaShows('Science Fiction')">Science Fiction</a>
-                        </li>
-                        <li>
-                            <a href="Family" @click.prevent="filterMediaShows('Family')">Family</a>
-                        </li>
-                        <li>
-                            <a href="Fantasy" @click.prevent="filterMediaShows('Fantasy')">Fantasy</a>
-                        </li>
-                        <li>
-                            <a href="Romance" @click.prevent="filterMediaShows('Romance')">Romance</a>
-                        </li>
+                    
                     
 
                     </ul>
@@ -90,8 +77,8 @@ export default {
     },
 
     methods: {
-        filterMediaShows(filterShows){
-            let url = `./admin/index.php?media=shows&filter=${filterShows}`;
+        filterShows(filterShows){
+            let url = `./admin/index.php?media=shows&filterShows=${filterShows}`;
 
 
             fetch(url)
@@ -99,7 +86,7 @@ export default {
             .then(data => {
                //localStorage.setItem("cachedFilter", JSON.stringify(data));
 
-                this.allRetrievedVideos = data;
+                this.allRetrievedShows = data;
                 this.currentMediaDetails = data[0];
             })
 
