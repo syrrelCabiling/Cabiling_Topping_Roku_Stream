@@ -2,7 +2,7 @@
 import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import UserHomeComponent from './components/UserHomeComponent.js';
-import KidComponent from './components/KidComponent.js';
+import KidsVideoComponent from './components/KidComponent.js';
 
 
 (() => {
@@ -13,7 +13,7 @@ import KidComponent from './components/KidComponent.js';
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: AllUsersComponent },
       { path: '/userhome', name: 'home', component: UserHomeComponent, props: true }, //important for passing data
-      { path: '/kidhome', name: 'kidhome', component: KidComponent, props: true } //important for passing data
+    { path: '/kidhome', name: 'kidhome', component: KidsVideoComponent, props: true } //important for passing data
 
     ]
   });
