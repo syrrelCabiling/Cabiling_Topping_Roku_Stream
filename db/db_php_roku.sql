@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 08, 2020 at 06:36 PM
+-- Generation Time: Apr 12, 2020 at 02:22 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -154,6 +154,35 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_r
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_moviesKIDS`
+--
+
+CREATE TABLE `tbl_moviesKIDS` (
+  `kmovies_id` int(11) NOT NULL,
+  `kmovies_cover` varchar(50) NOT NULL,
+  `kmovies_title` varchar(100) NOT NULL,
+  `kmovies_rating` varchar(5) NOT NULL,
+  `kmovies_year` varchar(5) NOT NULL,
+  `kmovies_runtime` varchar(20) NOT NULL,
+  `kmovies_storyline` text NOT NULL,
+  `kmovies_trailer` varchar(50) NOT NULL,
+  `kmovies_release` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_moviesKIDS`
+--
+
+INSERT INTO `tbl_moviesKIDS` (`kmovies_id`, `kmovies_cover`, `kmovies_title`, `kmovies_rating`, `kmovies_year`, `kmovies_runtime`, `kmovies_storyline`, `kmovies_trailer`, `kmovies_release`) VALUES
+(1, 'goonies.jpg', 'The Goonies', 'PG', '1985', '1h 55m', 'A group of west coast kids facing their last days together before a development paves over their homes stumble onto evidence of pirate\'s treasure attracting the attention of a family of criminals.\r\n', 'goonies.mp4', 'June 7, 1985'),
+(2, 'mermaid.png', 'The Little Mermaid', 'G', '1989', '1h 25m', 'A beautiful mermaid called Ariel makes a deal with Ursula, a sea witch, to meet Eric, a human prince she falls in love with. However, unaware of Ursula\'s evil plans, Ariel ends up in trouble.\r\n', 'mermaid.mp4', 'November 17, 1989'),
+(3, 'future.jpg', 'Back to the Future', 'PG', '1985', '1h 56m', 'Marty travels back in time using an eccentric scientist\'s time machine. However, he must make his high-school-aged parents fall in love in order to return to the present.\r\n', 'future.mp4', 'July 3, 1985'),
+(4, 'landbeforetime.jpg', 'The Land Before Time', 'G', '1988', '1h 20m', 'An orphaned brontosaurus dinosaur has to face many obstacles, until he along with 4 other dinosaurs learn how to survive with each others help.\r\n', 'landbeforetime.mp4', 'November 18, 1988'),
+(5, 'honey.jpg', 'Honey, I Shrunk the Kids', 'PG', '1989', '1h 41m', 'A scientist tries his best to get his recent invention, a shrinking machine, to work. Things go awry when he accidentally shrinks his children and throws them along with the garbage.\r\n', 'honey.mp4', 'June 23, 1989');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_mov_decade`
 --
 
@@ -206,8 +235,8 @@ INSERT INTO `tbl_mov_genre` (`mov_genre_id`, `movies_id`, `genre_id`) VALUES
 (3, 3, 1),
 (4, 4, 6),
 (5, 5, 15),
-(6, 6, 6),
-(7, 7, 6),
+(6, 6, 15),
+(7, 7, 15),
 (8, 8, 8),
 (9, 9, 8),
 (10, 10, 3),
@@ -251,6 +280,35 @@ INSERT INTO `tbl_shows` (`tv_id`, `tv_cover`, `tv_title`, `tv_rating`, `tv_year`
 (10, 'inspectorgadget.jpg', 'Inspector Gadget', 'TV-PG', '1983', '2 seasons', 'Inspector Gadgets, now takes route to solve the mystery rooting in America.\r\n', 'inspectorgadget.mp4', 'October 24, 1983', 0),
 (11, 'rugrats.jpeg', 'Rugrats', 'TV-Y', '1991', '9 seasons', '`Rugrats\' reveals the world from a baby\'s point of view. Everything looks bigger, more mysterious and uncontrollable. Angelica, the oldest, likes to terrorise her cousin, Tommy, and his friends, and is famous for screaming, \"You stupid babies!\" The adults in the series are often clueless.\r\n', 'rugrats.mp4', 'August 11, 1991', 0),
 (12, 'heyarnold.jpg', 'Hey Arnold!', 'TV-Y7', ' 1996', '5 seasons', 'The adventures of Arnold, a grade-schooler who lives with his grandparents Phil and Gertrude.\r\n', 'heyarnold.mp4', 'October 7, 1996', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_showsKIDS`
+--
+
+CREATE TABLE `tbl_showsKIDS` (
+  `kshows_id` int(11) NOT NULL,
+  `kshows_cover` varchar(20) NOT NULL,
+  `kshows_title` varchar(100) NOT NULL,
+  `kshows_rating` varchar(5) NOT NULL,
+  `kshows_year` varchar(5) NOT NULL,
+  `kshows_runtime` varchar(10) NOT NULL,
+  `kshows_storyline` text NOT NULL,
+  `kshows_trailer` varchar(20) NOT NULL,
+  `kshows_release` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_showsKIDS`
+--
+
+INSERT INTO `tbl_showsKIDS` (`kshows_id`, `kshows_cover`, `kshows_title`, `kshows_rating`, `kshows_year`, `kshows_runtime`, `kshows_storyline`, `kshows_trailer`, `kshows_release`) VALUES
+(1, 'fragglerock.jpg', 'Fraggle Rock', 'TV-Y', '1983', '5 seasons', 'The fertile imagination of Jim Henson spawned this colorful puppet program that was not only an international hit during the 1980s, but remains a much-loved favorite of viewers to this day. This series for both the young and young at heart follows the adventures of the Fraggles, a race of short, furry creatures living a carefree existence in a complex network of magical caves. When they\'re not filling their time playing games, singing songs or dancing their cares away, Gobo, Mokey, Red, Wembley and Boober Fraggle seek the sage advice of Marjory the Trash Heap, nosh on the confectionary constructions of the industrious Doozers, and attempt to stay clear of the giant beings known as Gorgs.\r\n', 'fragglerock.mp4', 'January 10, 1983'),
+(2, 'thomas.jpeg', 'Thomas & Friends', 'TV-Y', ' 1984', '16 seasons', 'Based on a series of children\'s books, \"Thomas & Friends\" features Thomas the Tank Engine going on adventures with his fellow locomotives on the island of Sodor. Thomas is apt to get into trouble by trying too hard to be, in his words, a \"really useful engine,\" attempting to do things that are best left to bigger engines. Other members of Sir Topham Hatt\'s railway include junior engine Percy, Thomas\' best friend, who is always willing to help, and big engine Gordon -- the fastest and most powerful member of the team -- who uses his superior strength to help the smaller engines get out of trouble.\r\n', 'thomas.mp4', 'October 9, 1984'),
+(3, 'inspectorgadget.jpg', 'Inspector Gadget', 'TV-PG', '1983', '2 seasons', 'Inspector Gadgets, now takes route to solve the mystery rooting in America.\r\n', 'inspectorgadget.mp4', 'October 24, 1983'),
+(4, 'rugrats.jpeg', 'Rugrats\r\n', 'TV-Y', '1991', '9 seasons', '`Rugrats\' reveals the world from a baby\'s point of view. Everything looks bigger, more mysterious and uncontrollable. Angelica, the oldest, likes to terrorise her cousin, Tommy, and his friends, and is famous for screaming, \"You stupid babies!\" The adults in the series are often clueless.\r\n', 'rugrats.mp4', 'August 11, 1991'),
+(5, 'heyarnold.jpg', 'Hey Arnold!', 'TV-Y7', ' 1996', '5 seasons', 'The adventures of Arnold, a grade-schooler who lives with his grandparents Phil and Gertrude.\r\n', 'heyarnold.mp4', 'October 7, 1996');
 
 -- --------------------------------------------------------
 
@@ -306,7 +364,7 @@ INSERT INTO `tbl_shows_genre` (`shows_genre_id`, `shows_id`, `genre_id`) VALUES
 (7, 9, 13),
 (8, 10, 9),
 (9, 11, 13),
-(10, 12, 3);
+(10, 12, 13);
 
 -- --------------------------------------------------------
 
@@ -337,8 +395,34 @@ INSERT INTO `tbl_songs` (`songs_id`, `song_cover`, `song_title`, `song_file`, `s
 (6, 'sunshine.jpg', 'You Are My Sushine', 'youAreMySunshine.mp3', '1977', '2:13', 0),
 (7, 'willalwaysloveyou.jpg', 'I Will Always Love You', 'willalwaysloveyou.mp3', '1974', '2:53', 0),
 (8, 'footloose.jpg', 'Footlose', 'footloose.mp3', '1984', '3:48', 0),
-(9, 'tiger.jpg', 'Eye of The Tige', 'tiger.mp3', '1982', '3:45', 0),
+(9, 'tiger.jpg', 'Eye of The Tiger', 'tiger.mp3', '1982', '3:45', 0),
 (10, 'girlsfun.jpg', 'Girls Just Wanna Have Fun', 'wannahavefun.mp3', '1983', '3:58', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_songsKIDS`
+--
+
+CREATE TABLE `tbl_songsKIDS` (
+  `ksongs_id` int(11) NOT NULL,
+  `ksongs_cover` varchar(50) NOT NULL,
+  `ksongs_title` varchar(50) NOT NULL,
+  `ksongs_file` varchar(50) NOT NULL,
+  `ksongs_year` varchar(5) NOT NULL,
+  `ksongs_runtime` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_songsKIDS`
+--
+
+INSERT INTO `tbl_songsKIDS` (`ksongs_id`, `ksongs_cover`, `ksongs_title`, `ksongs_file`, `ksongs_year`, `ksongs_runtime`) VALUES
+(5, 'sunshine.jpg', 'You Are My Sunshine', 'youAreMySunshine.mp3', '1977', '2:13'),
+(6, 'willalwaysloveyou.jpg', 'I Will Always Love You', 'willalwaysloveyou.mp3', '1974', '2:53'),
+(7, 'footloose.jpg', 'Footloose', 'footloose.mp3', '1984', '3:48'),
+(8, 'tiger.jpg', 'Eye of the Tiger', 'tiger.mp3', '1982', '3:45'),
+(9, 'girlsfun.jpg', 'Girls Just Wanna Have Fun', 'wannahavefun.mp3', '1983', '3:58');
 
 -- --------------------------------------------------------
 
@@ -376,7 +460,7 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permissions`, `user_admin`) VALUES
 (3, 'mom', 'admin', '123', 'me@you.com', '2020-03-09 15:48:21', '::1', 'friends', 5, 1),
-(4, 'kid', 'kid', '123', 'me@you.com', '2020-03-09 15:49:04', 'no', 'kid', 5, 0);
+(4, 'kid', 'kid', '123', 'me@you.com', '2020-03-09 15:49:04', '::1', 'kid', 5, 0);
 
 --
 -- Indexes for dumped tables
@@ -413,6 +497,12 @@ ALTER TABLE `tbl_movies`
   ADD PRIMARY KEY (`movies_id`);
 
 --
+-- Indexes for table `tbl_moviesKIDS`
+--
+ALTER TABLE `tbl_moviesKIDS`
+  ADD PRIMARY KEY (`kmovies_id`);
+
+--
 -- Indexes for table `tbl_mov_decade`
 --
 ALTER TABLE `tbl_mov_decade`
@@ -431,6 +521,12 @@ ALTER TABLE `tbl_shows`
   ADD PRIMARY KEY (`tv_id`);
 
 --
+-- Indexes for table `tbl_showsKIDS`
+--
+ALTER TABLE `tbl_showsKIDS`
+  ADD PRIMARY KEY (`kshows_id`);
+
+--
 -- Indexes for table `tbl_shows_decade`
 --
 ALTER TABLE `tbl_shows_decade`
@@ -447,6 +543,12 @@ ALTER TABLE `tbl_shows_genre`
 --
 ALTER TABLE `tbl_songs`
   ADD PRIMARY KEY (`songs_id`);
+
+--
+-- Indexes for table `tbl_songsKIDS`
+--
+ALTER TABLE `tbl_songsKIDS`
+  ADD PRIMARY KEY (`ksongs_id`);
 
 --
 -- Indexes for table `tbl_urating`
@@ -495,6 +597,12 @@ ALTER TABLE `tbl_movies`
   MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT for table `tbl_moviesKIDS`
+--
+ALTER TABLE `tbl_moviesKIDS`
+  MODIFY `kmovies_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `tbl_mov_decade`
 --
 ALTER TABLE `tbl_mov_decade`
@@ -513,6 +621,12 @@ ALTER TABLE `tbl_shows`
   MODIFY `tv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `tbl_showsKIDS`
+--
+ALTER TABLE `tbl_showsKIDS`
+  MODIFY `kshows_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `tbl_shows_decade`
 --
 ALTER TABLE `tbl_shows_decade`
@@ -529,6 +643,12 @@ ALTER TABLE `tbl_shows_genre`
 --
 ALTER TABLE `tbl_songs`
   MODIFY `songs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `tbl_songsKIDS`
+--
+ALTER TABLE `tbl_songsKIDS`
+  MODIFY `ksongs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_urating`
